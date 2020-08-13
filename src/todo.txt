@@ -1,0 +1,6 @@
+-set the font from google fonts
+-set the SVGs for the different weather c
+-add search icon to input box
+-add autocomplete feature
+-remove the white spacing around main div
+
