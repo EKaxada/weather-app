@@ -13,8 +13,10 @@
     "dotenv": "^8.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-cool-onclickoutside": "^1.6.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "use-places-autocomplete": "^1.9.1"
   },
   "scripts": {
     "start": "react-scripts start",

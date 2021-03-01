@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import AutoComplete from './AutoComplete'
 
 const App = () => {
   const [place, setPlace] = useState("");
@@ -21,9 +22,12 @@ const App = () => {
           setWeather(res.data);
           setPlace("");
         })
-        .catch((err) => console.log(err.message));
+        .catch((err) => {
+          console.log(err.message);
+        });
     }
   };
+
 
   return (
     <div className="App">
@@ -46,10 +50,13 @@ const App = () => {
           </div>
         )}
         {!weather.main && (
-        <h1>Welcome to <br/><strong>weather guide</strong></h1>
+          <h1>
+            Welcome to <br />
+            <strong>weather guide</strong>
+          </h1>
         )}
-        <br/>
-        <br/>
+        <br />
+        <br />
         <input
           type="text"
           name="place"
@@ -59,6 +66,7 @@ const App = () => {
           placeholder="Input location"
           autoFocus
         />
+        <AutoComplete/>
       </div>
     </div>
   );
