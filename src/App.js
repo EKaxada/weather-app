@@ -19,6 +19,7 @@ const App = () => {
         .then((res) => {
           console.log(res.data);
           setWeather(res.data);
+          setPlace("");
         })
         .catch((err) => console.log(err.message));
     }
@@ -44,6 +45,11 @@ const App = () => {
             </p>
           </div>
         )}
+        {!weather.main && (
+        <h1>Welcome to <br/><strong>weather guide</strong></h1>
+        )}
+        <br/>
+        <br/>
         <input
           type="text"
           name="place"
@@ -51,6 +57,7 @@ const App = () => {
           onChange={(e) => setPlace(e.target.value)}
           onKeyPress={fetchData}
           placeholder="Input location"
+          autoFocus
         />
       </div>
     </div>
