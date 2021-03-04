@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
-import AutoComplete from './AutoComplete'
+import SearchLocationInput from "./SearchLocationInput";
 
 const App = () => {
   const [place, setPlace] = useState("");
@@ -27,7 +27,6 @@ const App = () => {
         });
     }
   };
-
 
   return (
     <div className="App">
@@ -57,6 +56,7 @@ const App = () => {
         )}
         <br />
         <br />
+      
         <input
           type="text"
           name="place"
@@ -65,8 +65,9 @@ const App = () => {
           onKeyPress={fetchData}
           placeholder="Input location"
           autoFocus
+          id="searchbar"
         />
-        <AutoComplete/>
+        <SearchLocationInput />
       </div>
     </div>
   );
